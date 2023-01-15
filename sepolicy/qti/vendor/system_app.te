@@ -15,3 +15,4 @@ allow system_app proc_pagetypeinfo:file { read };
 # To allow Settings to find and bind Google Battery HAL
 allow system_app hal_googlebattery_service:service_manager find;
 binder_call(system_app, hal_googlebattery)
+allow system_app sysfs_leds:dir search;
