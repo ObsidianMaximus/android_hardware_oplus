@@ -1,3 +1,6 @@
+# Autotest
+persist.sys.oplus.autotest.monkeyRunning    u:object_r:exported_system_prop:s0
+
 # Camera
 NA                                                    u:object_r:exported_system_prop:s0
 oplus.camera.                                         u:object_r:exported_system_prop:s0
@@ -24,6 +27,8 @@ vendor.debug.magnet.enable                            u:object_r:exported_system
 vendor.oplus.                                         u:object_r:exported_system_prop:s0
 vendor.oppo.                                          u:object_r:exported_system_prop:s0
 vendor.property.debug.caliexif.enable                 u:object_r:exported_system_prop:s0
+oppo.camera.                                          u:object_r:exported_system_prop:s0
+persist.sys.camera.lao.enable                         u:object_r:exported_system_prop:s0
 
 # Display
 persist.sys.display.iris.absent   u:object_r:system_oplus_iris_prop:s0
@@ -38,6 +43,11 @@ ro.boot.flash.locked    u:object_r:exported_system_prop:s0
 persist.sys.assert.panic            u:object_r:exported_system_prop:s0
 persist.al.cfr.loglevel             u:object_r:exported_system_prop:s0
 persist.sys.log.                    u:object_r:exported_system_prop:s0
+persist.sys.camera.log.scene        u:object_r:exported_system_prop:s0
+persist.sys.debuglog.config         u:object_r:exported_system_prop:s0
+persist.sys.log.ae                  u:object_r:exported_system_prop:s0
+persist.sys.log.af                  u:object_r:exported_system_prop:s0
+persist.sys.log.awb                 u:object_r:exported_system_prop:s0
 
 # Modem
 persist.sys.enable_modem_dump    u:object_r:exported_system_prop:s0
