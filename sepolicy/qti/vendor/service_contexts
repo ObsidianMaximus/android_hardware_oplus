@@ -6,7 +6,6 @@ vendor.oplus.hardware.cammidasservice.IMIDASService/default              u:objec
 
 # Fingerprint
 vendor.oplus.hardware.commondcs.ICommonDcsAidlHalService/default    u:object_r:hal_fingerprint_service:s0
-
 authentication_service          u:object_r:oem_service:s0
 oplusoiface                     u:object_r:oem_service:s0
 OplusResourceManagerService     u:object_r:oem_service:s0
