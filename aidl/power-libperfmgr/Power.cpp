@@ -54,7 +54,7 @@ constexpr char kPowerHalRenderingProp[] = "vendor.powerhal.rendering";
 constexpr char kPowerHalAdpfRateProp[] = "vendor.powerhal.adpf.rate";
 constexpr int64_t kPowerHalAdpfRateDefault = -1;
 
-Power::Power(std::shared_ptr<HintManager> hm)
+Power::Power(HintManager * hm)
     : mHintManager(hm),
       mInteractionHandler(nullptr),
       mSustainedPerfModeOn(false),

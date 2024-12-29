@@ -42,7 +42,7 @@ enum InteractionState {
 
 class InteractionHandler {
   public:
-    InteractionHandler(std::shared_ptr<HintManager> const &hint_manager);
+    InteractionHandler(HintManager * const &hint_manager);
     ~InteractionHandler();
     bool Init();
     void Exit();
@@ -65,7 +65,7 @@ class InteractionHandler {
     std::unique_ptr<std::thread> mThread;
     std::mutex mLock;
     std::condition_variable mCond;
-    std::shared_ptr<HintManager> mHintManager;
+    HintManager * mHintManager;
 };
 
 }  // namespace pixel

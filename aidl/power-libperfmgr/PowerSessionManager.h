@@ -51,7 +51,7 @@ class PowerSessionManager : public MessageHandler {
     void removePowerSession(PowerHintSession *session);
 
     void handleMessage(const Message &message) override;
-    void setHintManager(std::shared_ptr<HintManager> const &hint_manager);
+    void setHintManager(HintManager * const &hint_manager);
 
     // Singleton
     static sp<PowerSessionManager> getInstance() {
@@ -64,7 +64,7 @@ class PowerSessionManager : public MessageHandler {
     void disableSystemTopAppBoost();
     void enableSystemTopAppBoost();
     const std::string kDisableBoostHintName;
-    std::shared_ptr<HintManager> mHintManager;
+    HintManager * mHintManager;
     std::unordered_set<PowerHintSession *> mSessions;  // protected by mLock
     std::unordered_map<int, int> mTidRefCountMap;      // protected by mLock
     std::mutex mLock;

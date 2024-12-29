@@ -79,7 +79,7 @@ static int FbIdleOpen(void) {
 
 }  // namespace
 
-InteractionHandler::InteractionHandler(std::shared_ptr<HintManager> const &hint_manager)
+InteractionHandler::InteractionHandler(HintManager * const &hint_manager)
     : mState(INTERACTION_STATE_UNINITIALIZED),
       mDurationMs(0),
       mHintManager(hint_manager) {}

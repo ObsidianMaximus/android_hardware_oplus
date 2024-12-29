@@ -30,7 +30,7 @@ namespace power {
 namespace impl {
 namespace pixel {
 
-void PowerSessionManager::setHintManager(std::shared_ptr<HintManager> const &hint_manager) {
+void PowerSessionManager::setHintManager(HintManager * const &hint_manager) {
     // Only initialize hintmanager instance if hint is supported.
     if (hint_manager->IsHintSupported(kDisableBoostHintName)) {
         mHintManager = hint_manager;

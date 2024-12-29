@@ -39,7 +39,7 @@ using ::android::perfmgr::HintManager;
 
 class Power : public ::aidl::android::hardware::power::BnPower {
   public:
-    Power(std::shared_ptr<HintManager> hm);
+    Power(HintManager * hm);
     ndk::ScopedAStatus setMode(Mode type, bool enabled) override;
     ndk::ScopedAStatus isModeSupported(Mode type, bool *_aidl_return) override;
     ndk::ScopedAStatus setBoost(Boost type, int32_t durationMs) override;
@@ -52,7 +52,7 @@ class Power : public ::aidl::android::hardware::power::BnPower {
     binder_status_t dump(int fd, const char **args, uint32_t numArgs) override;
 
   private:
-    std::shared_ptr<HintManager> mHintManager;
+    HintManager * mHintManager;
     std::unique_ptr<InteractionHandler> mInteractionHandler;
     std::atomic<bool> mSustainedPerfModeOn;
     const int64_t mAdpfRateNs;
